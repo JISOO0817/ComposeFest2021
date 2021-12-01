@@ -1,6 +1,5 @@
 <resources>
-    <string name="app_name">week1_BasicsCodelab</string>
-
+    <string name="app_name">Week1_BasicsCodelab</string>
     <string name="show_more">Show more</string>
     <string name="show_less">Show less</string>
 </resources>

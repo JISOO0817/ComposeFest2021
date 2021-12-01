@@ -18,7 +18,7 @@ private val DarkColorPalette = darkColors(
 
 private val LightColorPalette = lightColors(
     surface = Pink,
-    onSurface = Color.White,
+    onSurface = androidx.compose.ui.graphics.Color.White,
     primary = LightPink,
     onPrimary = HotPink
 )
