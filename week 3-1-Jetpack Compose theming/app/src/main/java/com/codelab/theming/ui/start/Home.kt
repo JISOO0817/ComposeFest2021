@@ -54,13 +54,15 @@ import androidx.compose.ui.unit.dp
 import com.codelab.theming.R
 import com.codelab.theming.data.Post
 import com.codelab.theming.data.PostRepo
+import com.codelab.theming.ui.finish.theme.JetnewsTheme
+import com.codelab.theming.ui.start.theme.myTheme
 import java.util.Locale
 
 @Composable
 fun Home() {
     val featured = remember { PostRepo.getFeaturedPost() }
     val posts = remember { PostRepo.getPosts() }
-    MaterialTheme {
+    myTheme {
         Scaffold(
             topBar = { AppBar() }
         ) { innerPadding ->
@@ -208,8 +210,10 @@ fun PostItem(
 @Composable
 private fun PostItemPreview() {
     val post = remember { PostRepo.getFeaturedPost() }
-    Surface {
-        PostItem(post = post)
+    myTheme {
+        Surface {
+            com.codelab.theming.ui.finish.PostItem(post = post)
+        }
     }
 }
 
@@ -217,7 +221,9 @@ private fun PostItemPreview() {
 @Composable
 private fun FeaturedPostPreview() {
     val post = remember { PostRepo.getFeaturedPost() }
-    FeaturedPost(post = post)
+    myTheme {
+        com.codelab.theming.ui.finish.FeaturedPost(post = post)
+    }
 }
 
 @Preview("Home")
